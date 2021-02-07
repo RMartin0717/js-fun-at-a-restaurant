@@ -12,7 +12,6 @@ function createRestaurant(name) {
   return restaurant
 }
 
-
 function addMenuItem(restaurant, item) {
   if (restaurant.menus.breakfast.includes(item) || restaurant.menus.lunch.includes(item) || restaurant.menus.dinner.includes(item)) {
     return restaurant;
@@ -30,10 +29,9 @@ function addMenuItem(restaurant, item) {
   }
 }
 
+
+
 function removeMenuItem(restaurant, itemName, type) {
-//check the given menu for an item containing
-//the itemName
-//remove the item with that name from the appropriate menu
   for (var i = 0; i < restaurant.menus[type].length; i++) {
     if (restaurant.menus[type][i].name === itemName) {
       restaurant.menus[type].splice([i]);
